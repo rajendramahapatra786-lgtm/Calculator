@@ -82,10 +82,22 @@ buttons.forEach(btn => {
         const value = btn.innerText;
         flashButton(value);
 
-        if (value === "AC") display.value = "";
-        else if (value === "⌫") display.value = display.value.slice(0, -1);
-        else if (value === "=") calculate();
-        else if (value === "ANS") display.value += "ANS";
+        if (value === "AC") {
+            display.value = "";
+        } 
+        else if (value === "⌫") {
+            display.value = display.value.slice(0, -1);
+        } 
+        else if (value === "=") {
+            calculate();
+        } 
+        else if (value === "ANS") {
+            if (display.value === "" || /[+\-*/(]$/.test(display.value)) {
+                display.value += "ANS";
+            } else {
+                display.value += "*ANS";
+            }
+        } 
         else {
             if (!canAddValue(value)) return;
             display.value += value;
