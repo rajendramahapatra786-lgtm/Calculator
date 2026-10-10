@@ -102,8 +102,4 @@ This is a beginner-friendly project intended for learning and demonstrating prog
 **Rajendra Mahapatra**
 
 
----
 
-## ⭐ Support
-
-If you found this project useful, consider giving the repository a ⭐ on GitHub.
